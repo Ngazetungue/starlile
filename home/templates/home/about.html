@@ -1,0 +1,133 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="management-section" style="padding: 40px 20px; background: linear-gradient(to bottom, red, #062b5c); ">
+    <div class="container">
+        <h2 style="text-align: left; color: #ffffff; margin-bottom: 20px; padding: 10px 20px; border-top-left-radius: 25px; font-weight: bold;">Management</h2>
+        
+        <div class="row justify-content-center align-items-center mb-5">
+            <div class="col-md-6 mb-4">
+                <div class="management-card p-4 bg-white shadow-sm rounded text-center">
+                    <h3 style="color: #062b5c; font-weight: bold;">The Board</h3>
+                    <p style="color: #333;">Our board consists of experienced professionals dedicated to the success and growth of African Stars Football Club. They provide strategic direction and oversight, ensuring that the club continues to thrive both on and off the field.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="management-card p-4 bg-white shadow-sm rounded text-center">
+                    <h3 style="color: #062b5c; font-weight: bold;">The Club</h3>
+                    <p style="color: #333;">African Stars Football Club is managed by a skilled team of executives and staff who handle the day-to-day operations. From marketing and finance to player development and community outreach, our company is dedicated to maintaining excellence in all aspects of the club.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container bg-light" style="max-width: 1400px; background:red">
+<section>
+    <div class="container about-section py-5 bg-light">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 style="text-align: left; color: #062b5c; margin-bottom: 20px; padding: 10px 20px; border-top-left-radius: 25px; font-weight: bold;">AFRICAN STARS FOOTBALL CLUB</h2>
+                <div class="about-content mb-5">
+                    <p class="lead">With 7 Namibia Premier League titles (1994, 2008-09, 2009-10, 2014-15, 2017-18, 2022-23, and 2023-24) and 5 Namibian Cup titles (2007, 2010, 2013, 2014, 2018) under our belt, African Stars Football Club has established itself as one of the top teams in the league. We have also won the Standard Bank Cup once in 2015 and were runners-up once in 2014. Additionally, we finished runners-up in the Dr. Hage Geingob Cup in 2014 and 2015 and placed third in 2016.</p>
+                    <p class="lead">African Stars Football Club has also made several appearances in CAF competitions, including 2 appearances in the CAF Champions League (2019 and 2020), 1 appearance in the CAF Confederation Cup (2014), and 1 appearance in the CAF Cup (1992).</p>
+                    <p class="lead">African Stars Football Club is a proud and accomplished football club that has significantly impacted the Namibian football scene. We continue to strive for excellence on and off the field and have a bright future ahead.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container" style="max-width: 1800px; background: #8c0012;">
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2 style="color: #fff; font-weight: bold;">OKASERANDU ACCOUNT</h2>
+          <p style="color:  #f0f0f5;">Register now to receive the latest news, purchase tickets and get exclusive access to African Stars content as well as a host of other benefits</p>
+          <button class="btn btn-outline-primary" type="button" style="color: #fff">Register</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2 style="color: #fff; font-weight: bold;">OKASERANDU SUPPORTER CLUB</h2>
+          <p style="color: #fff">Join the OKASERANDU SUPPORTER CLUB and be a part of African Stars Football Club's journey! We are a professional Namibian football club based in Windhoek, competing in the prestigious Namibia Premier League. Show your support and enjoy exclusive benefits as a member. Become an official member today and join us in celebrating our achievements on and off the field.</p>
+          <a href="{% url "about" %}"><button class="btn btn-outline-secondary" type="button" style="color: #fff">Join</button></a>
+        </div>
+      </div>
+
+    </div>
+</div>
+<hr>
+<section id="honours-section" style=" padding: 40px 20px;  ">
+    <div class="container bg-light">
+      <h2 style="text-align: left; color: #062b5c; margin-bottom: 20px; padding: 10px 20px; border-top-left-radius: 25px; font-weight: bold;">HONOURS</h2>
+      <div class="row justify-content-center align-items-center">
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="honour-card p-3 bg-white shadow-sm rounded text-center">
+            <img src="{% static 'home/trophy/1.svg' %}" alt="Premier League Trophy" class="img-fluid mb-3" style="max-height: 100px;">
+            <div class="card-content">
+              <h4 style="color: #e60000; font-weight: bold;">Namibia Premier League</h4>
+              <p style="color: #e60000; font-weight: bold;">7 Titles</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="honour-card p-3 bg-white shadow-sm rounded text-center">
+            <img src="{% static 'home/trophy/2.svg' %}" alt="Cup Trophy" class="img-fluid mb-3" style="max-height: 100px;">
+            <div class="card-content">
+              <h4 style="color: #e60000; font-weight: bold;">Namibian Cup</h4>
+              <p style="color: #e60000; font-weight: bold;">5 Titles</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="honour-card p-3 bg-white shadow-sm rounded text-center">
+            <img src="{% static 'home/trophy/3.svg' %}" alt="Standard Bank Cup Trophy" class="img-fluid mb-3" style="max-height: 100px;">
+            <div class="card-content">
+              <h4 style="color: #e60000; font-weight: bold;">Standard Bank Cup</h4>
+              <p style="color: #e60000; font-weight: bold;">1 Title</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="honour-card p-3 bg-white shadow-sm rounded text-center">
+            <img src="{% static 'home/trophy/4.png' %}" alt="CAF Champions League Trophy" class="img-fluid mb-3" style="max-height: 100px;">
+            <div class="card-content">
+              <h4 style="color: #e60000; font-weight: bold;">CAF Champions League</h4>
+              <p style="color: #e60000; font-weight: bold;">2 Appearances</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="honour-card p-3 bg-white shadow-sm rounded text-center">
+            <img src="{% static 'home/trophy/5.png' %}" alt="CAF Confederation Cup Trophy" class="img-fluid mb-3" style="max-height: 100px;">
+            <div class="card-content">
+              <h4 style="color: #e60000; font-weight: bold;">CAF Confederation Cup</h4>
+              <p style="color: #e60000; font-weight: bold;">1 Appearance</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="honour-card p-3 bg-white shadow-sm rounded text-center">
+            <img src="{% static 'home/trophy/5.png' %}" alt="CAF Cup Trophy" class="img-fluid mb-3" style="max-height: 100px;">
+            <div class="card-content">
+              <h4 style="color: #e60000; font-weight: bold;">CAF Cup</h4>
+              <p style="color: #e60000; font-weight: bold;">1 Appearance</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,276 @@
+:root {
+    --primary-color: #97002a;
+    --secondary-color: #062b5c;
+    --accent-color: #a60059;
+    --light-bg-color: #f8f8f8;
+    --light-text-color: #666666;
+    --dark-text-color: #000;
+    --white-color: #ffffff;
+    --button-hover-color: #8c0012;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--dark-text-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-top {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+}
+.navbar-top a {
+    color: var(--white-color);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: var(--white-color);
+    transition: color 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--light-text-color);
+}
+.carousel-caption {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.three-column-section {
+    background: var(--light-bg-color);
+    color: var(--light-text-color);
+    padding: 20px;
+    border: 2px dotted var(--dark-text-color);
+}
+.three-column-section .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.three-column-section .card-img-top {
+    width: 100%;
+    height: auto;
+}
+.three-column-section .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.three-column-section .card-text {
+    font-size: 1rem;
+}
+.hover-card {
+    transition: transform 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Partners Style */
+.partners-section {
+    background-color: var(--primary-color);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.footer ul li {
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+.footer ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Latest News Section */
+.latest-news-section {
+    background-color: var(--light-bg-color);
+    padding: 3rem 0;
+}
+.latest-news-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.news-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.news-card-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.news-card-text {
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+}
+.news-card-date {
+    color: #999999;
+}
+.read-more-btn {
+    display: inline-block;
+    background-color: #bf001a;
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.read-more-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Nav Tabs */
+.nav-tabs {
+    color: var(--secondary-color);
+}
+.nav-tabs .nav-link.active {
+    background-color: var(--secondary-color) !important;
+    color: var(--white-color) !important;
+}
+.nav-tabs .nav-link:hover {
+    background-color: lightcoral !important;
+}
+
+  @media (max-width: 768px) {
+    .player_sections {
+      padding: 40px 0;
+      height: auto;
+    }
+    .player img {
+      width: 150px;
+      height: 150px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 10%;
+    }
+    .carousel-item .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .col-md-4.col-12 {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .player img {
+      width: 120px;
+      height: 120px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 15%;
+    }
+  }
+
+
+  
+  /* About Page */
+
+.about-section {
+    background-color: #f8f9fa;
+    padding: 60px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #062b5c;
+}
+.about-content p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #062b5c;
+}
+.about-stats p {
+    font-size: 1.1rem;
+    color: #062b5c;
+    font-weight: 600;
+}
+    #management-section {
+        padding: 40px 20px;
+        background: linear-gradient(to bottom, red, #062b5c);
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    #management-section h2 {
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        border-top-left-radius: 25px;
+        font-weight: bold;
+    }
+    .management-card {
+        padding: 20px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .management-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .management-card h3 {
+        color: #062b5c;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .management-card p {
+        color: #333;
+    }
+
+#honours-section {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-size: cover;
+    background-position: center;
+}
+#honours-section h2 {
+    text-align: left;
+    color: #062b5c;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-top-left-radius: 25px;
+    font-weight: bold;
+}
+.honour-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.honour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-content h4 {
+    color: #e60000;
+    font-weight: bold;
+}
+.card-content p {
+    color: #e60000;
+    font-weight: bold;
+}
