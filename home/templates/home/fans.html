@@ -1,0 +1,94 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+    <div class="container py-4" style="background: linear-gradient(to bottom, #d32f2f, #0d47a1); max-width: 1800px;">
+        <div class="d-flex justify-content-center align-items-center p-5 mb-4 bg-primary text-white rounded-3" style="background: linear-gradient(to bottom, #d32f2f, #0d47a1); min-height: 300px;">
+            <div class="text-center">
+                <h1 class="display-4 fw-bold">Welcome to African Stars FC</h1>
+                <p class="col-md-8 fs-4 mx-auto lead">Experience the thrill and passion of football with us. Stay updated with the latest news and become part of our vibrant community.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="container mt-5 bg-light" style="max-width:1600px;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="border: 1px solid white; mb-4;">
+                <img src="{% static 'home/fan2.jpg' %}" class="card-img-top" alt="Membership Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body" style="color: #062b5c;">
+                    <h5 class="card-title">Membership</h5>
+                    <p class="card-text">Become an official member of African Stars FC and enjoy exclusive benefits!</p>
+                    <a href="#" class="btn" style="background-color: #97002a; color: white;">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="border: 1px solid white; mb-4;">
+                <img src="{% static 'home/fan2.jpg' %}" class="card-img-top" alt="Tickets Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body" style="color: #062b5c;">
+                    <h5 class="card-title">Tickets</h5>
+                    <p class="card-text">Get your tickets to the next match and support the team from the stands.</p>
+                    <a href="#" class="btn" style="background-color: #97002a; color: white;">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="border: 1px solid white; mb-4;">
+                <img src="{% static 'home/fan3.jpg' %}" class="card-img-top" alt="Merchandise Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body" style="color: #062b5c;">
+                    <h5 class="card-title">Merchandise</h5>
+                    <p class="card-text">Explore our official store and get your hands on the latest kits and gear.</p>
+                    <a href="#" class="btn" style="background-color: #97002a; color: white;">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+            <div class="card" style="border: 1px solid white;">
+                <img src="{% static 'home/fan3.jpg' %}" class="card-img-top" alt="Latest News Image" style="height: 200px; object-fit: cover;">
+                <div class="card-header" style="background-color: #062b5c; color: white;">
+                    <h4 class="mb-0">Latest News</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">African Stars FC wins the league!</li>
+                    <li class="list-group-item">Upcoming match against rival team.</li>
+                    <li class="list-group-item">New merchandise available in the store.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="border: 1px solid white;">
+                <img src="{% static 'home/fan2.jpg' %}" class="card-img-top" alt="Upcoming Events Image" style="height: 200px; object-fit: cover;">
+                <div class="card-header" style="background-color: #062b5c; color: white;">
+                    <h4 class="mb-0">Upcoming Events</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Fan meetup and autograph session - July 30th</li>
+                    <li class="list-group-item">Charity match - August 15th</li>
+                    <li class="list-group-item">Season opening event - September 5th</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="border: 1px solid white;">
+                <img src="{% static 'home/fan3.jpg' %}" class="card-img-top" alt="Additional Events Image" style="height: 200px; object-fit: cover;">
+                <div class="card-header" style="background-color: #062b5c; color: white;">
+                    <h4 class="mb-0">Additional Events</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Fan meetup and autograph session - July 30th</li>
+                    <li class="list-group-item">Charity match - August 15th</li>
+                    <li class="list-group-item">Season opening event - September 5th</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
