@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: var(--secondary-color);
+    background-color: var(--white-color);
     color: var(--dark-text-color);
     font-family: 'Open Sans', sans-serif;
 }
@@ -208,15 +208,12 @@ body {
     #management-section {
         padding: 40px 20px;
         background: linear-gradient(to bottom, red, #062b5c);
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
     }
     #management-section h2 {
         text-align: left;
         color: #ffffff;
         margin-bottom: 20px;
         padding: 10px 20px;
-        border-top-left-radius: 25px;
         font-weight: bold;
     }
     .management-card {
@@ -242,8 +239,6 @@ body {
 #honours-section {
     padding: 40px 20px;
     background-color: #f0f0f0;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
     background-size: cover;
     background-position: center;
 }
