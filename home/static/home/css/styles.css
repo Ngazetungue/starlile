@@ -7,10 +7,11 @@
     --dark-text-color: #000;
     --white-color: #ffffff;
     --button-hover-color: #8c0012;
+    --light-background-color: #f0f0f0;
 }
 
 body {
-    background-color: var(--white-color);
+    background-color: var(--light-background-color);
     color: var(--dark-text-color);
     font-family: 'Open Sans', sans-serif;
 }
