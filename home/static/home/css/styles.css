@@ -8,12 +8,16 @@
     --white-color: #ffffff;
     --button-hover-color: #8c0012;
     --light-background-color: #f0f0f0;
+    --combi-background-color: green;
 }
 
 body {
-    background-color: var(--light-background-color);
     color: var(--dark-text-color);
     font-family: 'Open Sans', sans-serif;
+  
+    background: linear-gradient(to bottom, #ffffff, #000);
+  
+      
 }
 
 .navbar-top {
