@@ -24,8 +24,8 @@ class Team(models.Model):
 class Fixture(models.Model):
     home = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='home_fixtures')
     away = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='away_fixtures')
-    date = models.CharField(max_length=100, blank=False, null=False)
-    time = models.CharField(max_length=100, blank=False, null=False)
+    date = models.DateField(auto_now_add=False)
+    time = models.TimeField(auto_now_add=False)
     stadium = models.CharField(max_length=100, blank=False, null=False)
     town = models.CharField(max_length=100, blank=False, null=False)
     
