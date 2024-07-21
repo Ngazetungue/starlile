@@ -14,11 +14,10 @@
 body {
     color: var(--dark-text-color);
     font-family: 'Open Sans', sans-serif;
-  
-    background: linear-gradient(to bottom, #ffffff, #000);
+    background: #f0f0f0
   
       
-}
+}  
 
 .navbar-top {
     background-color: var(--primary-color);
