@@ -82,59 +82,104 @@
 
 {% block content %}
 {% endblock content %}
-  <!-- Footer -->
-  <footer class="footer">
+ <!-- Footer -->
+<footer class="footer">
+    <!-- Sponsors/Partners Section -->
     <div class="container">
-      <h2 class="text-center mb-4" style="font-weight: bold;">PARTNERS</h2>
-      <div class="row">
-          <div class="col-md-3 col-sm-6 mb-4">
-              <img src="{% static 'home/tuyela.webp' %}" alt="Partner 1" class="img-fluid">
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <img src="{% static 'home/2.png' %}" alt="Partner 2" class="img-fluid">
+      <div class="row text-white mt-5">
+        <div class="col-12 mb-4">
+          <h5 class="text-light">PARTNERS</h5>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <img src="{% static 'home/hei.webp' %}" alt="Partner 2" class="img-fluid">
-      </div>
-      </div>
-  </div>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-4">
-                  <h5>Quick Links</h5>
-                  <ul>
-                      <li><a href="{% url "home" %}">Home</a></li>
-                      <li><a href="#">Teams</a></li>
-                      <li><a href="#">Fixtures</a></li>
-                      <li><a href="#">Results</a></li>
-                      <li><a href="#">Contact</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-4">
-                  <h5>Follow Us</h5>
-                  <ul>
-                      <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                      <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                      <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                      <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-4">
-                  <h5>Contact Us</h5>
-                  <address>
-                      123 Football Street,<br>
-                      Cityville, Africa<br>
-                      Phone: +123 456 789<br>
-                      Email: info@africanstarsfc.com
-                  </address>
-              </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="card text-white p-2" style="background: #97002a; border: none; margin-bottom: 0;">
+            <img src="{% static 'home/hei.webp' %}" class="card-img-top img-fluid" alt="Partner 1 Logo" style="width: 100px; height: auto;">
           </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="card text-white p-2" style="background: #97002a; border: none; margin-bottom: 0;">
+            <img src="{% static 'home/okm.webp' %}" class="card-img-top img-fluid" alt="Partner 2 Logo" style="width: 100px; height: auto;">
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="card text-white p-2" style="background: #97002a; border: none; margin-bottom: 0;">
+            <img src="{% static 'home/tuyela.webp' %}" class="card-img-top img-fluid" alt="Partner 3 Logo" style="width: 100px; height: auto;">
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="card text-white p-2" style="background: #97002a; border: none; margin-bottom: 0;">
+            <img src="{% static 'home/sea-fast.webp' %}" class="card-img-top img-fluid" alt="Partner 4 Logo" style="width: 100px; height: auto;">
+          </div>
+        </div>
       </div>
-      <div class="text-center mt-4">
-          <p>&copy; 2024 African Stars Football Club. All rights reserved. By Ngazetungue Muheue</p>
+    </div>
+    <div class="container">
+      <div class="row text-white">
+        <div class="col-12 col-md mb-4 mb-md-0">
+          <img class="mb-2" src="{% static 'home/african-stars-logo4.svg' %}" alt="African Stars FC Logo" width="80" height="70">
+          <small class="d-block mb-3">&copy; 1965–2024 African Stars Football Club. All rights reserved. By Ngazetungue Muheue</small>
+        </div>
+        <div class="col-6 col-md mb-4 mb-md-0">
+          <h5 class="text-light">Club Information</h5>
+          <ul class="list-unstyled text-light">
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Home</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Teams</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Fixtures</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Results</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Honours</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Legends</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md mb-4 mb-md-0">
+          <h5 class="text-light">Club Information</h5>
+          <ul class="list-unstyled text-light">
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Home</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Teams</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Fixtures</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Results</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Honours</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Legends</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md mb-4 mb-md-0">
+          <h5 class="text-light">Club Information</h5>
+          <ul class="list-unstyled text-light">
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Home</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Teams</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Fixtures</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Results</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Honours</a></li>
+            <li class="mb-1"><a class="text-light text-decoration-none" href="#">Legends</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md">
+          <h5 class="text-light">Follow Us</h5>
+          <ul class="list-unstyled d-flex">
+            <li class="me-3">
+              <a class="text-light" href="https://www.facebook.com/africanstarssoccerclub" aria-label="Facebook">
+                <i class="fab fa-facebook fa-lg"></i>
+              </a>
+            </li>
+            <li class="me-3">
+              <a class="text-light" href="https://x.com/african_StarsFC" aria-label="Twitter">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+            </li>
+            <li class="me-3">
+              <a class="text-light" href="https://www.instagram.com/africanstarsfc/" aria-label="Instagram">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+            </li>
+            <li class="me-3">
+              <a class="text-light" href="https://www.youtube.com/@africanstars_f.c." aria-label="YouTube">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
   </footer>
-
+  
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
