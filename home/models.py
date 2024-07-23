@@ -1,6 +1,5 @@
 from django.db import models
 
-# FIXTURES, RESULTS MODELS START
 class Team(models.Model):
     TEAM_CHOICES = [
         ("African Stars FC", "African Stars FC"),
@@ -48,4 +47,44 @@ class Result(models.Model):
     def away_team(self):
         return self.fixture.away
 
-# FIXTURES, RESULTS MODELS END
+class Story(models.Model):
+    title = models.CharField(max_length=200, blank=False, null=False)
+    image = models.ImageField(upload_to="home/upload", blank=False, null=False)
+    
+    def __str__(self):
+        return self.title
+class News(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=False)
+    image = models.ImageField(upload_to="home/news", blank=False, null=False)
+    date = models.DateField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.title} on {self.date.strftime('%Y-%m-%d')}"
+class Tv(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=False)
+    image = models.ImageField(upload_to="home/news", blank=False, null=False)
+    date = models.DateField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.title} on the {self.date}"
+class CAF(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=False)
+    image = models.ImageField(upload_to="home/news", blank=False, null=False)
+    date = models.DateField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.title} on {self.date.strftime('%Y-%m-%d')}"
+class Premiership(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=False)
+    image = models.ImageField(upload_to="home/news", blank=False, null=False)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.title} on {self.date.strftime('%Y-%m-%d')}"
+class NFACup(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=False)
+    image = models.ImageField(upload_to="home/news", blank=False, null=False)
+    date = models.DateField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.title} on {self.date.strftime('%Y-%m-%d')}"
