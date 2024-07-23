@@ -14,7 +14,7 @@
 body {
     color: var(--dark-text-color);
     font-family: 'Open Sans', sans-serif;
-    background: #f0f0f0
+    background: #8c0012
   
       
 }  
@@ -38,6 +38,7 @@ body {
     padding: 1rem;
     border-radius: 15px;
 }
+
 
 .three-column-section {
     background: var(--light-bg-color);
