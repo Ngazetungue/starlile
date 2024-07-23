@@ -39,45 +39,17 @@
           <div class="carousel-item active">
             <div class="container">
               <div class="row align-items-center">
+                {% for fixture in fixtures %}
                 <div class="col-md-4 text-center">
-                  <p>African Stars vs Ongos FC</p>
-                  <p>Time: 18:00</p>
-                  <p>Date: 2024-07-20</p>
+                  <p>{{fixture.home}} vs {{fixture.away}}</p>
+                  <p>Time: {{fixture.time}}</p>
+                  <p>Date: {{fixture.date}}</p>
                 </div>
-                <div class="col-md-4 text-center">
-                  <p>Young African vs African Stars</p>
-                  <p>Time: 20:00</p>
-                  <p>Date: 2024-07-21</p>
-                </div>
-                <div class="col-md-4 text-center">
-                  <p>Khomas Nampol vs African Stars</p>
-                  <p>Time: 22:00</p>
-                  <p>Date: 2024-07-22</p>
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-md-4 text-center">
-                  <p>African Stars vs Chula Chula</p>
-                  <p>Time: 18:00</p>
-                  <p>Date: 2024-07-23</p>
-                </div>
-                <div class="col-md-4 text-center">
-                  <p>Unam FC vs African Stars</p>
-                  <p>Time: 20:00</p>
-                  <p>Date: 2024-07-24</p>
-                </div>
-                <div class="col-md-4 text-center">
-                  <p>African Stars vs Young African</p>
-                  <p>Time: 22:00</p>
-                  <p>Date: 2024-07-25</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <!-- Add more carousel items for additional matches -->
         </div>
         <a class="carousel-control-prev" href="#matchSchedule" role="button" data-slide="prev">

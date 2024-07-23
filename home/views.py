@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from . models import Fixture
 
-# Create your views here.
+
 def home(request):
-    return render(request, "home/home.html")
+    fixtures = Fixture.objects.all()
+    return render(request, "home/home.html", {"fixtures": fixtures})
 
 def about(request):
     return render(request, "home/about.html" )
