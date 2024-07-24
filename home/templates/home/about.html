@@ -39,27 +39,53 @@
         </div>
     </div>
 </section>
-<div class="container" style="max-width: 1800px; background: #8c0012;">
-
+<section id="honours-section" style="padding: 40px 20px; background: radial-gradient(red 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #97002a, #000000);">
+  <div class="container">
     <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2 style="color: #fff; font-weight: bold;">OKASERANDU ACCOUNT</h2>
-          <p class="lead" style="color:  #f0f0f5;">Register now to receive the latest news, purchase tickets and get exclusive access to African Stars content as well as a host of other benefits</p>
-          <button class="btn btn-outline-primary" type="button" style="color: #fff">Register</button>
+      <!-- Sponsorships Section -->
+      <div class="col-md-6 mb-4"> 
+        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
+          <img src="{% static "home/star5.jpg" %}" alt="Sponsorship Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+          <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
+            <h5 style="font-weight: bold; margin-bottom: 10px;">WOMEN TEAM</h5>
+            <p class="card-text" style="color: #ffffff; margin-bottom: 0;">Join our team of sponsors and partners to support the club and gain valuable exposure for your brand. Together, we can achieve greatness.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2 style="color: #fff; font-weight: bold;">OKASERANDU SUPPORTER CLUB</h2>
-          <p class="lead"  style="color: #fff">Join the OKASERANDU SUPPORTER CLUB and be a part of African Stars Football Club's journey! We are a professional Namibian football club based in Windhoek, competing in the prestigious Namibia Premier League. Show your support and enjoy exclusive benefits as a member. Become an official member today and join us in celebrating our achievements on and off the field.</p>
-          <a href="{% url "about" %}"><button class="btn btn-outline-secondary" type="button" style="color: #fff">Join</button></a>
+      <!-- Youth Academy Section -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
+          <img src="{% static "home/fan3.jpg" %}" alt="Youth Academy Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+          <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
+            <h5 style="color: #ffffff; font-weight: bold; margin-bottom: 10px;">YOUTH ACADEMY</h5>
+            <p class="card-text" style="color: #ffffff; margin-bottom: 0;">Our youth academy is dedicated to developing the next generation of football stars. Learn more about our programs and how to join.</p>
+          </div>
         </div>
       </div>
-
+      <!-- Community Engagement Section -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
+          <img src="{% static "home/fans.jpg" %}" alt="Community Engagement Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+          <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
+            <h5 style="color: #ffffff; font-weight: bold; margin-bottom: 10px;">COMMUNITY ENGAGEMENT</h5>
+            <p class="card-text" style="color: #f0f0f5; margin-bottom: 0;">African Stars is committed to giving back to the community. Discover our community projects and how you can get involved.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Club Store Section -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
+          <img src="{% static "home/star8.jpg" %}" alt="Club Store Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+          <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
+            <h5 style="color: #ffffff; font-weight: bold; margin-bottom: 10px;">CLUB STORE</h5>
+            <p class="card-text" style="color: #ffffff; margin-bottom: 0;">Visit our club store to purchase official African Stars merchandise, including kits, accessories, and more.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<hr>
+  </div>
+</section>
+
 <section id="honours-section" style="padding: 40px 20px;">
   <div class="container" style="max-width: 1600px;">
     <h4 class="text-left mb-4 p-3 rounded-top font-weight-bold" style="color: #062b5c;">HONOURS</h4>
