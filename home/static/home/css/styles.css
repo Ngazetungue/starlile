@@ -39,6 +39,21 @@ body {
 }
 
 
+#live-section .card {
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+#live-section .card-header {
+    background-color: #062b5c;
+    color: white;
+}
+
+#live-section .list-group-item {
+    border: none;
+}
+
+
 .three-column-section {
     background: var(--light-bg-color);
     color: var(--light-text-color);
