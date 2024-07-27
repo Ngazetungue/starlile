@@ -33,23 +33,23 @@
         </a>
     </div>
     <header class="text-white py-4" style="background: radial-gradient(red 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #97002a, #97002a);">
-
       <div id="matchSchedule" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="container">
               <div class="row align-items-center">
                 {% for fixture in fixtures %}
-                <div class="col-md-4 text-center">
-                  <p>{{fixture.home}} vs {{fixture.away}}</p>
-                  <p>Time: {{fixture.time}}</p>
-                  <p>Date: {{fixture.date}}</p>
+                <div class="col-md-4 text-center mb-3">
+                  <div class="p-3" style="background: rgba(0, 0, 0, 0.5); border-radius: 0.375rem;">
+                    <p class="mb-1" style="font-size: 1.25rem; font-weight: bold;">{{fixture.home}} vs {{fixture.away}}</p>
+                    <p class="mb-1">Time: {{fixture.time}}</p>
+                    <p class="mb-0">Date: {{fixture.date}}</p>
+                  </div>
                 </div>
                 {% endfor %}
               </div>
             </div>
           </div>
-
           <!-- Add more carousel items for additional matches -->
         </div>
         <a class="carousel-control-prev" href="#matchSchedule" role="button" data-slide="prev">
@@ -62,36 +62,37 @@
         </a>
       </div>
     </header>
-</div>
+    
 <div class="container-xxl"  >
 
   <section id="feature-section" style="padding: 40px 20px; background: #ffffff;">
     <div class="container-xxl py-4">
-        <div class="row align-items-center">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <img src="{% static 'home/feature-img.jpg' %}" alt="Match Image" class="img-fluid" style="border-radius: 0.375rem; width: 100%;">
-            </div>
-            <div class="col-md-4">
-                <h5 class="display-5 fw-bold" style="color: #062b5c; font-weight: bold;">African Stars Football Club vs Okahandja United FCS</h5>
-                <p class="fs-4" style="color: #97002a; font-size: 30px; font-weight: bold;">Stream the match live on the Official African Stars FC channel.</p>
-                <button class="btn btn-lg" type="button" style="background-color: #97002a; color: white;">Watch</button>
-            </div>
-            <div class="col-md-2">
-                <div class="card mb-4" style="border: 1px solid white;">
-                    <div class="card-header" style="background-color: #062b5c; color: white;">
-                        <h4 class="mb-0">Latest Results</h4>
-                    </div>
-                    <ul class="list-group list-group-flush" style="color: #97002a;">
-                        <li class="list-group-item">Match 1: Team A vs Team B - 2:1</li>
-                        <li class="list-group-item">Match 2: Team C vs Team D - 1:3</li>
-                        <li class="list-group-item">Match 3: Team E vs Team F - 0:0</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="{% static 'home/feature-img.jpg' %}" alt="Match Image" class="img-fluid" style="border-radius: 0.375rem; width: 100%;">
         </div>
+        <div class="col-md-4">
+          <h1 class="display-5 fw-bold" style="color: #062b5c;">African Stars Football Club vs Okahandja United FCS</h1>
+          <p class="fs-4" style="color: #97002a; font-size: 1.25rem; font-weight: bold;">Stream the match live on the Official African Stars FC channel.</p>
+          <button class="btn btn-lg" type="button" style="background-color: #97002a; color: white;">Watch</button>
+        </div>
+        <div class="col-md-2">
+          <div class="card mb-4" style="border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <div class="card-header" style="background-color: #062b5c; color: white; text-align: center;">
+              <h4 class="mb-0">Latest Results</h4>
+            </div>
+            <ul class="list-group list-group-flush" style="color: #97002a;">
+              <li class="list-group-item">Match 1: Team A vs Team B - 2:1</li>
+              <li class="list-group-item">Match 2: Team C vs Team D - 1:3</li>
+              <li class="list-group-item">Match 3: Team E vs Team F - 0:0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<section id="player-section" style="padding: 40px 20px; background: url('{% static "home/member-background.jpg" %}') center/cover no-repeat; overflow: hidden; position: relative;">
+  </section>
+  
+<section id="player-section" style="padding: 40px 20px; background: radial-gradient(#1a1a1a 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #000000, #1a1a1a);">
   <!-- Red Transparent Bubbles -->
   <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 100px; height: 100px; top: 10%; left: 10%; z-index: 1;"></div>
   <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 150px; height: 150px; top: 30%; left: 50%; z-index: 1;"></div>
@@ -99,74 +100,74 @@
   <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 200px; height: 200px; bottom: 10%; left: 30%; z-index: 1;"></div>
 
   <div class="container mt-5">
-      <div class="row mb-3">
-          <div class="col-md-6">
-              <h2 style="background-color: #97002a; color: #ffffff; padding: 10px; border-radius: 5px; display: inline-block;">League Players Squad</h2>
-          </div>
-          <div class="col-md-6 text-md-right">
-              <h3 style="background-color: #97002a; color: #ffffff; padding: 10px; border-radius: 5px; display: inline-block;">Full Team Squad</h3>
-          </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <h6 style="background-color: #97002a; color: #A9A9A9; padding: 10px; border-radius: 5px; display: inline-block;">League Players Squad</h6>
       </div>
-      <div class="row">
-          <div class="col-md-6">
-              <div class="card" style="background-color: #336699; border: 1px solid #ccc; margin-bottom: 1rem;">
-                  <div class="card-body" style="display: flex; padding: 0;">
-                      <div style="width: 50%; height: 312px; background-image: url('{% static "home/star1.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                      <div style="width: 50%; padding: 1rem; color: #062b5c;">
-                          <h5 style="font-size: 1.25rem; font-weight: bold; color: #97002a;">Player One</h5>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Position: Forward</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Country: Namibia</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Bio: A talented forward with a knack for scoring. Known for quick sprints and sharp reflexes.</p>
-                          <a href="#" style="display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem; background-color: #97002a; color: #fff; text-decoration: none; border-radius: 5px;">Follow</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="card" style="background-color: #336699; border: 1px solid #ccc; margin-bottom: 1rem;">
-                  <div class="card-body" style="display: flex; padding: 0;">
-                      <div style="width: 50%; height: 312px; background-image: url('{% static "home/star2.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                      <div style="width: 50%; padding: 1rem; color: #062b5c;">
-                          <h5 style="font-size: 1.25rem; font-weight: bold; color: #97002a;">Player Two</h5>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Position: Midfielder</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Country: South Africa</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Bio: A creative midfielder who excels in passing and playmaking. Brings vision and strategy to the game.</p>
-                          <a href="#" style="display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem; background-color: #97002a; color: #fff; text-decoration: none; border-radius: 5px;">Follow</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+      <div class="col-md-6 text-md-right">
+        <h6 style="background-color: #97002a; color: #A9A9A9; padding: 10px; border-radius: 5px; display: inline-block;">Full Team Squad</h6>
       </div>
-      <div class="row">
-          <div class="col-md-6">
-              <div class="card" style="background-color: #336699; border: 1px solid #ccc; margin-bottom: 1rem;">
-                  <div class="card-body" style="display: flex; padding: 0;">
-                      <div style="width: 50%; height: 312px; background-image: url('{% static "home/star3.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                      <div style="width: 50%; padding: 1rem; color: #062b5c;">
-                          <h5 style="font-size: 1.25rem; font-weight: bold; color: #97002a;">Player Three</h5>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Position: Defender</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Country: Zambia</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Bio: A strong defender known for tactical skills and defensive prowess. Excellent at blocking and intercepting.</p>
-                          <a href="#" style="display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem; background-color: #97002a; color: #fff; text-decoration: none; border-radius: 5px;">Follow</a>
-                      </div>
-                  </div>
-              </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card" style="background-color: #1a1a1a; border: 1px solid #000000; margin-bottom: 1rem;">
+          <div class="card-body" style="display: flex; padding: 0;">
+            <div style="width: 40%; height: 240px; background-image: url('{% static "home/star1.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            <div style="width: 60%; padding: 0.5rem; color: #909090;">
+              <h5 style="font-size: 1rem; font-weight: bold; color: #A9A9A9;">Player One</h5>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: Forward</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: Namibia</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Bio: A talented forward with a knack for scoring. Known for quick sprints and sharp reflexes.</p>
+              <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+            </div>
           </div>
-          <div class="col-md-6">
-              <div class="card" style="background-color: #336699; border: 1px solid #ccc; margin-bottom: 1rem;">
-                  <div class="card-body" style="display: flex; padding: 0;">
-                      <div style="width: 50%; height: 312px; background-image: url('{% static "home/star4.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                      <div style="width: 50%; padding: 1rem; color: #062b5c;">
-                          <h5 style="font-size: 1.25rem; font-weight: bold; color: #97002a;">Player Four</h5>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Position: Goalkeeper</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Country: Ghana</p>
-                          <p style="font-size: 1rem; margin-top: 0.5rem;">Bio: A reliable goalkeeper with quick reflexes and strong leadership. Keeps the team safe with crucial saves.</p>
-                          <a href="#" style="display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem; background-color: #97002a; color: #fff; text-decoration: none; border-radius: 5px;">Follow</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
+      <div class="col-md-6">
+        <div class="card" style="background-color: #1a1a1a; border: 1px solid #000000; margin-bottom: 1rem;">
+          <div class="card-body" style="display: flex; padding: 0;">
+            <div style="width: 40%; height: 240px; background-image: url('{% static "home/star2.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            <div style="width: 60%; padding: 0.5rem; color: #909090;">
+              <h5 style="font-size: 1rem; font-weight: bold; color: #A9A9A9;">Player Two</h5>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: Midfielder</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: South Africa</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Bio: A creative midfielder who excels in passing and playmaking. Brings vision and strategy to the game.</p>
+              <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card" style="background-color: #1a1a1a; border: 1px solid #000000; margin-bottom: 1rem;">
+          <div class="card-body" style="display: flex; padding: 0;">
+            <div style="width: 40%; height: 240px; background-image: url('{% static "home/star3.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            <div style="width: 60%; padding: 0.5rem; color: #909090;">
+              <h5 style="font-size: 1rem; font-weight: bold; color: #A9A9A9;">Player Three</h5>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: Defender</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: Zambia</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Bio: A strong defender known for tactical skills and defensive prowess. Excellent at blocking and intercepting.</p>
+              <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card" style="background-color: #1a1a1a; border: 1px solid #000000; margin-bottom: 1rem;">
+          <div class="card-body" style="display: flex; padding: 0;">
+            <div style="width: 40%; height: 240px; background-image: url('{% static "home/star4.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            <div style="width: 60%; padding: 0.5rem; color: #909090;">
+              <h5 style="font-size: 1rem; font-weight: bold; color: #A9A9A9;">Player Four</h5>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: Goalkeeper</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: Ghana</p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Bio: A reliable goalkeeper with quick reflexes and strong leadership. Keeps the team safe with crucial saves.</p>
+              <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -177,218 +178,78 @@
 
 
 <section class="tabs_an_gap " style="background: #ffffff">
-    <div class="container" style="max-width:1600px;" >
-        <div class="tabs_inner" >
-            <ul class="nav nav-tabs" id="myTab" role="tablist" style="background: radial-gradient(red 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #97002a, #062b5c);">
-                <li class="nav-item">
-                    <a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true" style="color: #fff;">NEWS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"style="color: #fff;">VIDEOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="tv-tab" data-toggle="tab" href="#tv" role="tab" aria-controls="tv" aria-selected="false"style="color: #fff;">AFRICAN STARS TV</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="debmarine-tab" data-toggle="tab" href="#debmarine" role="tab" aria-controls="debmarine" aria-selected="false"style="color: #fff;">DEBMARINE PREMIERSHIP</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="caf-tab" data-toggle="tab" href="#caf" role="tab" aria-controls="caf" aria-selected="false"style="color: #fff;">CAF CHAMPIONS LEAGUE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="nfa-tab" data-toggle="tab" href="#nfa" role="tab" aria-controls="nfa" aria-selected="false"style="color: #fff;">NFA CUP</a>
-                </li>
-            </ul>
+    <div class="container" >
+      <div class="tabs_inner">
+        <ul class="nav nav-tabs" id="myTab" role="tablist" style="background: radial-gradient(circle, #e64a19 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #97002a, #062b5c); border-bottom: 2px solid #444;">
+            <li class="nav-item">
+                <a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true" style="color: #ffffff; font-weight: bold;">NEWS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tv-tab" data-toggle="tab" href="#tv" role="tab" aria-controls="tv" aria-selected="false" style="color: #ffffff;">AFRICAN STARS TV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="debmarine-tab" data-toggle="tab" href="#debmarine" role="tab" aria-controls="debmarine" aria-selected="false" style="color: #ffffff;">DEBMARINE PREMIERSHIP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="caf-tab" data-toggle="tab" href="#caf" role="tab" aria-controls="caf" aria-selected="false" style="color: #ffffff;">CAF CHAMPIONS LEAGUE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nfa-tab" data-toggle="tab" href="#nfa" role="tab" aria-controls="nfa" aria-selected="false" style="color: #ffffff;">NFA CUP</a>
+            </li>
+        </ul>
+
             <div class="tab-content" id="myTabContent">
                 <!-- News Tab Content -->
-                <div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
-                    <div class="row">
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container" style="max-width: 1600px;">
-                        
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <img class="bd-placeholder-img card-img-top" src="{% static "home/star1.jpg" %}" alt="Thumbnail" width="100%" height="225">
-                                    <div class="card-body">
+<div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+  <div class="container py-5">
+      <div class="row">
+          <div class="col-12">
+              <div class="album bg-light">
+                  <div class="container" style="max-width: 1600px;">
+                      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                          <div class="col">
+                              <div class="card shadow-sm border-light">
+                                  <img class="card-img-top" src="{% static 'home/star1.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                  <div class="card-body">
                                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                       <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-body-secondary">9 mins</small>
+                                          <small class="text-muted">9 mins ago</small>
                                       </div>
-                                    </div>
                                   </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <img class="bd-placeholder-img card-img-top" src="{% static "home/star2.jpg" %}" alt="Thumbnail" width="100%" height="225">
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <img class="bd-placeholder-img card-img-top" src="{% static "home/star3.jpg" %}" alt="Thumbnail" width="100%" height="225">
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <img class="bd-placeholder-img card-img-top" src="{% static "home/star4.jpg" %}" alt="Thumbnail" width="100%" height="225">
-                                    <div class="card-body">
-                                      <p class="lead">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <img class="bd-placeholder-img card-img-top" src="{% static "home/star5.jpg" %}" alt="Thumbnail" width="100%" height="225">
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <img class="bd-placeholder-img card-img-top" src="{% static "home/star6.jpg" %}" alt="Thumbnail" width="100%" height="225">
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
                           </div>
-                        <!-- End Latest News Section -->
-                    </div>
-                </div>
-                <!-- End News Tab Content -->
-                
-                <!-- Videos Tab Content -->
-                <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
-                    <div class="row">
-                        <!-- Example video -->
-               
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container" style="max-width: 1400px;">
-                        
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
+                          <div class="col">
+                              <div class="card shadow-sm border-light">
+                                  <img class="card-img-top" src="{% static 'home/star5.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                  <div class="card-body">
                                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                       <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
+                                          <small class="text-muted">9 mins ago</small>
                                       </div>
-                                    </div>
                                   </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
                           </div>
-                        <!-- End video content -->
-                    </div>
-                </div>
-                <!-- End Videos Tab Content -->
+                          <div class="col">
+                              <div class="card shadow-sm border-light">
+                                  <img class="card-img-top" src="{% static 'home/star6.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                  <div class="card-body">
+                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                      <div class="d-flex justify-content-between align-items-center">
+                                          <small class="text-muted">9 mins ago</small>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Latest News Section -->
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End News Tab Content -->
+
                 
                 <!-- TV Tab Content -->
                 <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
@@ -413,52 +274,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+                                
                                 <div class="col">
                                   <div class="card shadow-sm">
                                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -520,52 +336,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+                                
                                 <div class="col">
                                   <div class="card shadow-sm">
                                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -627,52 +398,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+                                
                                 <div class="col">
                                   <div class="card shadow-sm">
                                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -733,52 +459,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+                                
                                 <div class="col">
                                   <div class="card shadow-sm">
                                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -887,45 +568,45 @@
 <!--================ End Tabs Area =================-->
 
 
-<section id="honours-section" style="padding: 40px 20px; background: radial-gradient(red 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #97002a, #000000);">
+<section id="honours-section" style="padding: 40px 20px; background: linear-gradient(to bottom, #97002a, #000000);">
   <div class="container">
     <div class="row align-items-md-stretch">
       <!-- Sponsorships Section -->
       <div class="col-md-6 mb-4"> 
-        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
-          <img src="{% static "home/star5.jpg" %}" alt="Sponsorship Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+        <div class="card h-100 rounded-3" style="position: relative; color: #888888; background-color: #ff0000; overflow: hidden;">
+          <img src="{% static 'home/star5.jpg' %}" alt="Sponsorship Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover;">
           <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
-            <h5 style="font-weight: bold; margin-bottom: 10px;">WOMEN TEAM</h5>
+            <h5 style="color: #ffcc00; font-weight: bold; margin-bottom: 10px;">WOMEN TEAM</h5>
             <p class="card-text" style="color: #ffffff; margin-bottom: 0;">Join our team of sponsors and partners to support the club and gain valuable exposure for your brand. Together, we can achieve greatness.</p>
           </div>
         </div>
       </div>
       <!-- Youth Academy Section -->
       <div class="col-md-6 mb-4">
-        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
-          <img src="{% static "home/fan3.jpg" %}" alt="Youth Academy Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+        <div class="card h-100 rounded-3" style="position: relative; color: #888888; background-color: #ff0000; overflow: hidden;">
+          <img src="{% static 'home/fan3.jpg' %}" alt="Youth Academy Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover;">
           <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
-            <h5 style="color: #ffffff; font-weight: bold; margin-bottom: 10px;">YOUTH ACADEMY</h5>
+            <h5 style="color: #ffcc00; font-weight: bold; margin-bottom: 10px;">YOUTH ACADEMY</h5>
             <p class="card-text" style="color: #ffffff; margin-bottom: 0;">Our youth academy is dedicated to developing the next generation of football stars. Learn more about our programs and how to join.</p>
           </div>
         </div>
       </div>
       <!-- Community Engagement Section -->
       <div class="col-md-6 mb-4">
-        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
-          <img src="{% static "home/fans.jpg" %}" alt="Community Engagement Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+        <div class="card h-100 rounded-3" style="position: relative; color: #888888; background-color: #ff0000; overflow: hidden;">
+          <img src="{% static 'home/fans.jpg' %}" alt="Community Engagement Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover;">
           <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
-            <h5 style="color: #ffffff; font-weight: bold; margin-bottom: 10px;">COMMUNITY ENGAGEMENT</h5>
-            <p class="card-text" style="color: #f0f0f5; margin-bottom: 0;">African Stars is committed to giving back to the community. Discover our community projects and how you can get involved.</p>
+            <h5 style="color: #ffcc00; font-weight: bold; margin-bottom: 10px;">COMMUNITY ENGAGEMENT</h5>
+            <p class="card-text" style="color: #ffffff; margin-bottom: 0;">African Stars is committed to giving back to the community. Discover our community projects and how you can get involved.</p>
           </div>
         </div>
       </div>
       <!-- Club Store Section -->
       <div class="col-md-6 mb-4">
-        <div class="card h-100 p-5 rounded-3" style="position: relative; color: white; background-color: #ff0000;">
-          <img src="{% static "home/star8.jpg" %}" alt="Club Store Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.375rem;">
+        <div class="card h-100 rounded-3" style="position: relative; color: #888888; background-color: #ff0000; overflow: hidden;">
+          <img src="{% static 'home/star8.jpg' %}" alt="Club Store Image" class="card-img" style="width: 100%; height: 200px; object-fit: cover;">
           <div class="card-img-overlay d-flex flex-column justify-content-end" style="background: rgba(0, 0, 0, 0.5); padding: 20px;">
-            <h5 style="color: #ffffff; font-weight: bold; margin-bottom: 10px;">CLUB STORE</h5>
+            <h5 style="color: #ffcc00; font-weight: bold; margin-bottom: 10px;">CLUB STORE</h5>
             <p class="card-text" style="color: #ffffff; margin-bottom: 0;">Visit our club store to purchase official African Stars merchandise, including kits, accessories, and more.</p>
           </div>
         </div>
@@ -934,96 +615,98 @@
   </div>
 </section>
 
-<section id="member-section" style="padding: 40px 20px; background: url('{% static "home/member-background.jpg" %}') center/cover no-repeat; overflow: hidden;">
-  <div class="container" style="max-width:1600px;">
-  
-      <div class="row align-items-md-stretch">
-        <div class="col-md-6">
-          <div class="h-100 p-5 text-bg-dark rounded-3">
-            <h4 style="color: #e0e2e4; font-weight: bold;">OKASERANDU ACCOUNT</h4>
-            <p style="color:  #e0e2e4;">Register now to receive the latest news, purchase tickets and get exclusive access to African Stars content as well as a host of other benefits</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="h-100 p-5 text-bg-dark rounded-3">
-            <h4 style="color: #fff; font-weight: bold;">ABOUT AFRICAN STARS</h4>
-            <p class="card-text" style="color: #fff">African Stars Football Club is a professional Namibian football club based in Windhoek, Namibia. We play in the country's highest division, the Namibia Premier League, and have made a name for ourselves with our outstanding achievements.</p>
-          </div>
-        </div>
-  
-      </div>
-  </div>
-  </section>
-  <br>
 
-  <section id="member-section" style="padding: 40px 20px; background: url('{% static "home/honour-bg.jpg" %}') center/cover no-repeat; overflow: hidden;">
+<section id="member-section" style="padding: 40px 20px; background: url('{% static "home/member-background.jpg" %}') center/cover no-repeat; overflow: hidden;">
   <div class="container" style="max-width: 1600px;">
-    <h4 class="text-left mb-4 p-3 rounded-top font-weight-bold" style="color: #062b5c;">HONOURS</h4>
-    <div class="row justify-content-center align-items-center">
-      
-      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
-        <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
-          <img src="{% static 'home/trophy/1.svg' %}" alt="Premier League Trophy" class="img-fluid mb-3" style="max-height: 80px;">
-          <div class="card-content">
-            <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">Namibia Premier League</h4>
-            <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">7 Titles</p>
-          </div>
+    <div class="row align-items-md-stretch">
+      <!-- OKASERANDU Account Section -->
+      <div class="col-md-6 mb-4">
+        <div class="h-100 p-5 text-white rounded-3" style="background: rgba(0, 0, 0, 0.7);">
+          <h4 style="font-weight: bold;">OKASERANDU ACCOUNT</h4>
+          <p>Register now to receive the latest news, purchase tickets, and get exclusive access to African Stars content as well as a host of other benefits.</p>
         </div>
       </div>
-      
-      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
-        <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
-          <img src="{% static 'home/trophy/2.svg' %}" alt="Cup Trophy" class="img-fluid mb-3" style="max-height: 80px;">
-          <div class="card-content">
-            <h4 class=" font-weight-bold" style="font-size: 16px; color: #062b5c;">Namibian Cup</h4>
-            <p class=" font-weight-bold" style="font-size: 14px; color: #062b5c;">5 Titles</p>
-          </div>
+      <!-- About African Stars Section -->
+      <div class="col-md-6 mb-4">
+        <div class="h-100 p-5 text-white rounded-3" style="background: rgba(0, 0, 0, 0.7);">
+          <h4 style="font-weight: bold;">ABOUT AFRICAN STARS</h4>
+          <p>African Stars Football Club is a professional Namibian football club based in Windhoek. We play in the Namibia Premier League and have made a name for ourselves with our outstanding achievements.</p>
         </div>
       </div>
-      
-      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
-        <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
-          <img src="{% static 'home/trophy/3.svg' %}" alt="Standard Bank Cup Trophy" class="img-fluid mb-3" style="max-height: 80px;">
-          <div class="card-content">
-            <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">Standard Bank Cup</h4>
-            <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">1 Title</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
-        <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
-          <img src="{% static 'home/trophy/4.png' %}" alt="CAF Champions League Trophy" class="img-fluid mb-3" style="max-height: 80px;">
-          <div class="card-content">
-            <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">CAF Champions League</h4>
-            <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">2 Appearances</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
-        <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
-          <img src="{% static 'home/trophy/5.png' %}" alt="CAF Confederation Cup Trophy" class="img-fluid mb-3" style="max-height: 80px;">
-          <div class="card-content">
-            <h4 class=" font-weight-bold" style="font-size: 16px; color: #062b5c;">CAF Confederation Cup</h4>
-            <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">1 Appearance</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
-        <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
-          <img src="{% static 'home/trophy/5.png' %}" alt="CAF Cup Trophy" class="img-fluid mb-3" style="max-height: 80px;">
-          <div class="card-content">
-            <h4 class=" font-weight-bold" style="font-size: 16px;color: #062b5c;">CAF Cup</h4>
-            <p class=" font-weight-bold" style="font-size: 14px; color: #062b5c;">1 Appearance</p>
-          </div>
-        </div>
-      </div>
-      
     </div>
   </div>
 </section>
+
+  <br>
+
+  <section id="member-section" style="padding: 40px 20px; background: url('{% static "home/honour-bg.jpg" %}') center/cover no-repeat; overflow: hidden;">
+    <div class="container" style="max-width: 1600px;">
+        <h4 class="text-left mb-4 p-3 rounded-top font-weight-bold" style="color: #ffffff; font-size: 24px; border-bottom: 2px solid #062b5c;">Honours</h4>
+        <div class="row justify-content-center align-items-center">
+            <!-- Honour Card -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
+                    <img src="{% static 'home/trophy/1.svg' %}" alt="Premier League Trophy" class="img-fluid mb-3" style="max-height: 80px; object-fit: contain;">
+                    <div class="card-content">
+                        <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">Namibia Premier League</h4>
+                        <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">7 Titles</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Honour Card -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
+                    <img src="{% static 'home/trophy/2.svg' %}" alt="Cup Trophy" class="img-fluid mb-3" style="max-height: 80px; object-fit: contain;">
+                    <div class="card-content">
+                        <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">Namibian Cup</h4>
+                        <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">5 Titles</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Honour Card -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
+                    <img src="{% static 'home/trophy/3.svg' %}" alt="Standard Bank Cup Trophy" class="img-fluid mb-3" style="max-height: 80px; object-fit: contain;">
+                    <div class="card-content">
+                        <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">Standard Bank Cup</h4>
+                        <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">1 Title</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Honour Card -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
+                    <img src="{% static 'home/trophy/4.png' %}" alt="CAF Champions League Trophy" class="img-fluid mb-3" style="max-height: 80px; object-fit: contain;">
+                    <div class="card-content">
+                        <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">CAF Champions League</h4>
+                        <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">2 Appearances</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Honour Card -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
+                    <img src="{% static 'home/trophy/5.png' %}" alt="CAF Confederation Cup Trophy" class="img-fluid mb-3" style="max-height: 80px; object-fit: contain;">
+                    <div class="card-content">
+                        <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">CAF Confederation Cup</h4>
+                        <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">1 Appearance</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Honour Card -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="honour-card p-3 bg-white shadow-sm rounded text-center" style="width: 150px; height: 250px;">
+                    <img src="{% static 'home/trophy/6.png' %}" alt="CAF Cup Trophy" class="img-fluid mb-3" style="max-height: 80px; object-fit: contain;">
+                    <div class="card-content">
+                        <h4 class="font-weight-bold" style="font-size: 16px; color: #062b5c;">CAF Cup</h4>
+                        <p class="font-weight-bold" style="font-size: 14px; color: #062b5c;">1 Appearance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 </div>
 
