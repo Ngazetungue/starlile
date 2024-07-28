@@ -1,0 +1,87 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="store-section" style="padding: 40px 20px; background-color: #f0f0f0;">
+    <div class="container my-5">
+        <h2 class="text-center" style="color: #062b5c; font-weight: bold;">Club Store</h2>
+        <div class="row">
+          <!-- Item 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);">
+              <img src="{% static 'home/star8.jpg' %}" class="card-img-top" alt="Club Kit">
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #97002a;">Club Kit</h5>
+                <p class="card-text" style="color: #666666;">Official club kit for the season.</p>
+                <p class="card-text" style="color: #062b5c; font-size: 1.2rem; font-weight: bold;">$50.00</p>
+                <a href="#" class="btn btn-primary" style="background-color: #062b5c; border-radius: 25px; border: none;">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <img src="{% static 'home/star8.jpg' %}" class="card-img-top" alt="Club Water Bottle">
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #97002a; font-style: italic;">Club Water Bottle</h5>
+                <p class="card-text" style="color: #666666;">Stay hydrated with our branded bottle.</p>
+                <p class="card-text" style="color: #062b5c; font-size: 1.2rem; font-weight: bold;">$10.00</p>
+                <a href="#" class="btn btn-primary" style="background-color: #97002a; border: none;">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+              <img src="{% static 'home/star8.jpg' %}" class="card-img-top" alt="Club Scarf">
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #97002a;">Club Scarf</h5>
+                <p class="card-text" style="color: #666666;">Show your support with our stylish scarf.</p>
+                <p class="card-text" style="color: #062b5c; font-size: 1.2rem; font-weight: bold;">$15.00</p>
+                <a href="#" class="btn btn-primary" style="background-color: #062b5c; border: none; text-transform: uppercase;">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Item 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+              <img src="{% static 'home/star8.jpg' %}" class="card-img-top" alt="Club Hat">
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #97002a; font-family: 'Arial', sans-serif;">Club Hat</h5>
+                <p class="card-text" style="color: #666666;">Keep cool and look cool with our club hat.</p>
+                <p class="card-text" style="color: #062b5c; font-size: 1.2rem; font-weight: bold;">$20.00</p>
+                <a href="#" class="btn btn-primary" style="background-color: #062b5c; border: none; border-radius: 10px;">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <img src="{% static 'home/star8.jpg' %}" class="card-img-top" alt="Club Jersey">
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #97002a; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);">Club Jersey</h5>
+                <p class="card-text" style="color: #666666;">Official jersey for the season.</p>
+                <p class="card-text" style="color: #062b5c; font-size: 1.2rem; font-weight: bold;">$55.00</p>
+                <a href="#" class="btn btn-primary" style="background-color: #062b5c; border: none; font-weight: bold;">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+              <img src="{% static 'home/star8.jpg' %}" class="card-img-top" alt="Club Keychain">
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #97002a;">Club Keychain</h5>
+                <p class="card-text" style="color: #666666;">Keep your keys safe with our club keychain.</p>
+                <p class="card-text" style="color: #062b5c; font-size: 1.2rem; font-weight: bold;">$5.00</p>
+                <a href="#" class="btn btn-primary" style="background-color: #062b5c; border: none; border-radius: 50px;">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </section>
+{% endblock content %}

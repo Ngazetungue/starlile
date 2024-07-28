@@ -68,7 +68,7 @@
   <section id="feature-section" style="padding: 40px 20px; background: #ffffff;">
     <div class="container-xxl py-4">
       <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0">
+        <div class="col-md-5 mb-4 mb-md-0">
           <img src="{% static 'home/nfa-champion.jpg' %}" alt="Match Image" class="img-fluid" style="border-radius: 0.375rem; width: 100%;">
         </div>
         <div class="col-md-4">
@@ -76,12 +76,12 @@
           <p class="fs-4" style="color: #97002a; font-size: 1.25rem; font-weight: bold;">Stream the match live on the Official African Stars FC channel.</p>
           <button class="btn btn-lg" type="button" style="background-color: #97002a; color: white;">Watch</button>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
           <div class="card mb-4" style="border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
             <div class="card-header" style="background-color: #062b5c; color: white; text-align: center;">
-              <h4 class="mb-0">Latest Results</h4>
+              <h6 class="mb-0">Latest Results</h6>
             </div>
-            <ul class="list-group list-group-flush" style="color: #97002a;">
+            <ul class="list-group list-group-flush" style="color: #97002a;font-size: 0.75rem;">
               <li class="list-group-item">Match 1: Stars vs YB - 2:1</li>
               <li class="list-group-item">Match 2: Team C vs Team D - 1:3</li>
               <li class="list-group-item">Match 3: Team E vs Team F - 0:0</li>
@@ -93,11 +93,6 @@
   </section>
   
 <section id="player-section" style="padding: 40px 20px; background: radial-gradient(#1a1a1a 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom, #000000, #1a1a1a);">
-  <!-- Red Transparent Bubbles -->
-  <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 100px; height: 100px; top: 10%; left: 10%; z-index: 1;"></div>
-  <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 150px; height: 150px; top: 30%; left: 50%; z-index: 1;"></div>
-  <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 120px; height: 120px; top: 60%; right: 15%; z-index: 1;"></div>
-  <div style="position: absolute; border-radius: 50%; background: rgba(255, 0, 0, 0.4); width: 200px; height: 200px; bottom: 10%; left: 30%; z-index: 1;"></div>
 
   <div class="container mt-5">
     <div class="row mb-3">
@@ -105,7 +100,7 @@
         <h6 style="background-color: #97002a; color: #A9A9A9; padding: 10px; border-radius: 5px; display: inline-block;">League Players Squad</h6>
       </div>
       <div class="col-md-6 text-md-right">
-        <h6 style="background-color: #97002a; color: #A9A9A9; padding: 10px; border-radius: 5px; display: inline-block;">Full Team Squad</h6>
+        <a href="{% url "team" %}"><h6 style="background-color: #97002a; color: #A9A9A9; padding: 10px; border-radius: 5px; display: inline-block;">Full Team Squad</h6></a>
       </div>
     </div>
     <div class="row">
@@ -179,7 +174,7 @@
 <section class="tabs_an_gap " style=" padding: 40px 20px; background: #ffffff">
     <div class="container" >
       <div class="tabs_inner">
-        <ul class="nav nav-tabs" id="myTab" role="tablist" style="background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #062b5c, #97002a); border-bottom: 2px solid #444;">
+        <ul class="nav nav-tabs " id="myTab" role="tablist" style="background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #062b5c, #97002a); border-bottom: 2px solid #444;">
             <li class="nav-item">
                 <a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true" style="color: #ffffff; font-weight: bold;">News</a>
             </li>
@@ -613,23 +608,68 @@
     </div>
   </div>
 </section>
-
-
-<section id="member-section" style="padding: 40px 20px; background: url('{% static "home/member-background.jpg" %}') center/cover no-repeat; overflow: hidden;">
-  <div class="container" style="max-width: 1600px;">
-    <div class="row align-items-md-stretch">
-      <!-- OKASERANDU Account Section -->
-      <div class="col-md-6 mb-4">
-        <div class="h-100 p-5 text-white rounded-3" style="background: rgba(0, 0, 0, 0.7);">
-          <h4 style="font-weight: bold;">OKASERANDU ACCOUNT</h4>
-          <p style="color: #C8C8C8;">Register now to receive the latest news, purchase tickets, and get exclusive access to African Stars content as well as a host of other benefits.</p>
+ 
+<section id="hightlights-section" style="padding: 40px 20px; background: url('{% static "home/member-background.jpg" %}') center/cover no-repeat; overflow: hidden;">
+  <div class="container mt-5" style="position: relative; z-index: 1;">
+    <div class="row">
+      <div class="col-md-6" style="margin-bottom: 20px;">
+        <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <div style="position: relative; padding-top: 56.25%; background-color: #000;">
+            <iframe src="https://www.youtube.com/embed/20HQO0tkZ18?modestbranding=1&showinfo=0&rel=0&t=47s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+            <i class="fab fa-youtube" style="position: absolute; bottom: 10px; right: 10px; font-size: 1rem; color: #ffffff;"></i>
+          </div>
+          <div class="card-body" style="padding: 1rem; color: #BEBEBE; background: rgba(0, 0, 0, 0.9);">
+            <div style="font-size: 1rem; font-weight: bold;">Match 1 Highlights</div>
+            <div style="font-size: 1rem; margin-top: 0.5rem;">Description of the match highlights.</div>
+          </div>
         </div>
       </div>
-      <!-- About African Stars Section -->
-      <div class="col-md-6 mb-4">
-        <div class="h-100 p-5 text-white rounded-3" style="background: rgba(0, 0, 0, 0.7);">
-          <h4 style="font-weight: bold;">ABOUT AFRICAN STARS</h4>
-          <p style="color: #C8C8C8;">African Stars Football Club is a professional Namibian football club based in Windhoek. We play in the Namibia Premier League and have made a name for ourselves with our outstanding achievements.</p>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6" style="margin-bottom: 20px;">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <div style="position: relative; padding-top: 56.25%; background-color: #000;">
+                <iframe src="https://www.youtube.com/embed/AVdEF3rScws?modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                <i class="fab fa-youtube" style="position: absolute; bottom: 10px; right: 10px; font-size: 1rem; color: #ffffff;"></i>
+              </div>
+              <div class="card-body" style="padding: 1rem; color: #BEBEBE; background: rgba(0, 0, 0, 0.9);">
+                <div style="font-size: 1rem; font-weight: bold;">African Stars 1-0 Supersports United</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="margin-bottom: 20px;">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <div style="position: relative; padding-top: 56.25%; background-color: #000;">
+                <iframe src="https://www.youtube.com/embed/fsgi_jct-rI?modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                <i class="fab fa-youtube" style="position: absolute; bottom: 10px; right: 10px; font-size: 1rem; color: #ffffff;"></i>
+              </div>
+              <div class="card-body" style="padding: 1rem; color: #BEBEBE; background: rgba(0, 0, 0, 0.9);">
+                <div style="font-size: 1rem; font-weight: bold;">African Stars 2-0 Masitaoka FC</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="margin-bottom: 20px;">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <div style="position: relative; padding-top: 56.25%; background-color: #000;">
+                <iframe src="https://www.youtube.com/embed/cYlsNynPdR0?modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                <i class="fab fa-youtube" style="position: absolute; bottom: 10px; right: 10px; font-size: 1rem; color: #ffffff;"></i>
+              </div>
+              <div class="card-body" style="padding: 1rem; color: #BEBEBE; background: rgba(0, 0, 0, 0.9);">
+                <div style="font-size: 1rem; font-weight: bold;">Match 4 Highlights</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="margin-bottom: 20px;">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <div style="position: relative; padding-top: 56.25%; background-color: #000;">
+                <iframe src="https://www.youtube.com/embed/G8qaJ_JUXkg?modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                <i class="fab fa-youtube" style="position: absolute; bottom: 10px; right: 10px; font-size: 1rem; color: #ffffff;"></i>
+              </div>
+              <div class="card-body" style="padding: 1rem; color: #BEBEBE; background: rgba(0, 0, 0, 0.9);">
+                <div style="font-size: 1rem; font-weight: bold;">Match 5 Highlights</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

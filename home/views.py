@@ -12,8 +12,17 @@ def home(request):
 def about(request):
     return render(request, "home/about.html" )
 
+def team(request):
+    return render(request, "home/squad.html" )
+
 def fans(request):
     return render(request, "home/fans.html" )
+
+def matches(request):
+    return render(request, "home/matches.html" )
+
+def store(request):
+    return render(request, "home/store.html" )
 
 def news_list(request):
     news = News.objects.all()
