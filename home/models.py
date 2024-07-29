@@ -8,6 +8,8 @@ class Team(models.Model):
         ("Eshoke Chula Chula FC", "Eshoke Chula Chula FC"),
         ("Khomas Nampol FC", "Khomas Nampol FC"),
         ("KK Palace FC", "KK Palace FC"),
+        ("Mighty Gunners fC", "Mighty Gunners FC"),
+        ("Namibia Collection Services FC", "Namibia Collection Services FC"),
         ("Okahandja United FC", "Okahandja United FC"),
         ("Ongos FC", "Ongos FC"),
         ("Tigers FC", "Tigers FC"),
@@ -16,6 +18,7 @@ class Team(models.Model):
     ]
 
     name = models.CharField(max_length=100, choices=TEAM_CHOICES, unique=True)
+    logo = models.ImageField(upload_to='team_logos/')
 
     def __str__(self):
         return self.name
@@ -30,11 +33,14 @@ class Fixture(models.Model):
     
     def __str__(self):
         return f"{self.home} vs {self.away} on {self.date} at {self.time}"
+    class Meta:
+        ordering = ["-date"]
 
 class Result(models.Model):
     fixture = models.OneToOneField(Fixture, on_delete=models.CASCADE)
     home_score = models.PositiveIntegerField()
     away_score = models.PositiveIntegerField()
+    date = models.DateField(auto_now_add=False)
     
     def __str__(self):
         return f"{self.fixture.home} {self.home_score} - {self.away_score} {self.fixture.away}"
@@ -46,6 +52,9 @@ class Result(models.Model):
     @property
     def away_team(self):
         return self.fixture.away
+    
+    class Meta:
+        ordering = ["-date"]
 
 class Story(models.Model):
     title = models.CharField(max_length=200, blank=False, null=False)

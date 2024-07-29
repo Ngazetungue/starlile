@@ -15,132 +15,35 @@
         <div class="col-12" style="margin-bottom: 20px;">
           <h3 style="font-size: 1.5rem; color: #97002a;">July 2024</h3>
         </div>
+        {% for fixture in fixtures %}
         <div class="col-12">
           <div class="card mb-3" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background: #ffffff;">
             <div class="card-body" style="padding: 20px;">
               <div class="row align-items-center">
                 <div class="col-md-3 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">July 30, 2024</div>
-                  <div style="font-size: 1rem; color: #666666;">17:00</div>
+                  <div style="font-size: 1rem; font-weight: bold; color: #062b5c;">{{fixture.date}}</div>
+                  <div style="font-size: 1rem; color: #666666;">{{fixture.time}}</div>
                 </div>
                 <div class="col-md-6 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">
-                    <img src="{% static 'home/african-stars-logo.png' %}" alt="African Stars" style="height: 30px; vertical-align: middle;">
-                    African Stars vs 
-                    <img src="{% static 'home/supersports-united-logo.png' %}" alt="Supersports United" style="height: 30px; vertical-align: middle;">
-                    Supersports United
+                  <div style="font-size: 1rem; font-weight: bold; color: #062b5c;">
+                    <img src="{{ fixture.home.logo.url }}" alt="{{ fixture.home.name }}" style="height: 30px; vertical-align: middle;">
+                    {{fixture.home}} vs 
+                    <img src="{{ fixture.away.logo.url }}" alt="{{ fixture.away.name }}" style="height: 30px; vertical-align: middle;">
+                    {{fixture.away}}
                   </div>
                 </div>
                 <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; color: #666666;">Independence Stadium</div>
+                  <div style="font-size: 1rem; color: #666666;">{{fixture.stadium}}</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
   
       <!-- August Fixtures -->
-      <div class="row">
-        <div class="col-12" style="margin-bottom: 20px;">
-          <h3 style="font-size: 1.5rem; color: #97002a;">August 2024</h3>
-        </div>
-        <div class="col-12">
-          <div class="card mb-3" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background: #ffffff;">
-            <div class="card-body" style="padding: 20px;">
-              <div class="row align-items-center">
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">August 3, 2024</div>
-                  <div style="font-size: 1rem; color: #666666;">15:30</div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">
-                    <img src="{% static 'home/african-stars-logo.png' %}" alt="African Stars" style="height: 30px; vertical-align: middle;">
-                    African Stars vs 
-                    <img src="{% static 'home/masitaoka-fc-logo.png' %}" alt="Masitaoka FC" style="height: 30px; vertical-align: middle;">
-                    Masitaoka FC
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; color: #666666;">Sam Nujoma Stadium</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background: #ffffff;">
-            <div class="card-body" style="padding: 20px;">
-              <div class="row align-items-center">
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">August 10, 2024</div>
-                  <div style="font-size: 1rem; color: #666666;">18:00</div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">
-                    <img src="{% static 'home/african-stars-logo.png' %}" alt="African Stars" style="height: 30px; vertical-align: middle;">
-                    African Stars vs 
-                    <img src="{% static 'home/blue-waters-logo.png' %}" alt="Blue Waters" style="height: 30px; vertical-align: middle;">
-                    Blue Waters
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; color: #666666;">Kuisebmund Stadium</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- September Fixtures -->
-      <div class="row">
-        <div class="col-12" style="margin-bottom: 20px;">
-          <h3 style="font-size: 1.5rem; color: #97002a;">September 2024</h3>
-        </div>
-        <div class="col-12">
-          <div class="card mb-3" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background: #ffffff;">
-            <div class="card-body" style="padding: 20px;">
-              <div class="row align-items-center">
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">September 5, 2024</div>
-                  <div style="font-size: 1rem; color: #666666;">19:00</div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">
-                    <img src="{% static 'home/african-stars-logo.png' %}" alt="African Stars" style="height: 30px; vertical-align: middle;">
-                    African Stars vs 
-                    <img src="{% static 'home/black-africa-logo.png' %}" alt="Black Africa" style="height: 30px; vertical-align: middle;">
-                    Black Africa
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; color: #666666;">Independence Stadium</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background: #ffffff;">
-            <div class="card-body" style="padding: 20px;">
-              <div class="row align-items-center">
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">September 12, 2024</div>
-                  <div style="font-size: 1rem; color: #666666;">16:30</div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div style="font-size: 1.2rem; font-weight: bold; color: #062b5c;">
-                    <img src="{% static 'home/african-stars-logo.png' %}" alt="African Stars" style="height: 30px; vertical-align: middle;">
-                    African Stars vs 
-                    <img src="{% static 'home/eleven-arrows-logo.png' %}" alt="Eleven Arrows" style="height: 30px; vertical-align: middle;">
-                    Eleven Arrows
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; color: #666666;">Sam Nujoma Stadium</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
   
       <!-- Add more months and matches as needed -->
   

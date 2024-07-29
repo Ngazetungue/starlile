@@ -2,12 +2,13 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import NewsForm
-from . models import Fixture, News
+from . models import Fixture, Result, News
 
 
 def home(request):
-    fixtures = Fixture.objects.all()
-    return render(request, "home/home.html", {"fixtures": fixtures})
+    fixtures = Fixture.objects.order_by("-date")[:3]
+    results = Result.objects.order_by('-date')[:3]
+    return render(request, "home/home.html", {"fixtures": fixtures, "results": results})
 
 def about(request):
     return render(request, "home/about.html" )
@@ -19,7 +20,8 @@ def fans(request):
     return render(request, "home/fans.html" )
 
 def matches(request):
-    return render(request, "home/matches.html" )
+    fixtures = Fixture.objects.all()
+    return render(request, "home/matches.html", {"fixtures": fixtures} )
 
 def store(request):
     return render(request, "home/store.html" )
