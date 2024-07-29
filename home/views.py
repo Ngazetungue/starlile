@@ -2,19 +2,33 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import NewsForm
-from . models import Fixture, Result, News
+from . models import Fixture, Result, Player,  News
 
 
 def home(request):
     fixtures = Fixture.objects.order_by("-date")[:3]
     results = Result.objects.order_by('-date')[:3]
-    return render(request, "home/home.html", {"fixtures": fixtures, "results": results})
+    players = Player.objects.all()[:4]
+    return render(request, "home/home.html", {"fixtures": fixtures, "results": results, "players": players})
 
 def about(request):
     return render(request, "home/about.html" )
 
 def team(request):
-    return render(request, "home/squad.html" )
+    forwards = Player.objects.filter(position='FWD')
+    midfielders = Player.objects.filter(position='MID')
+    defenders = Player.objects.filter(position='DEF')
+    goalkeepers = Player.objects.filter(position='GK')
+    
+    context = {
+        'forwards': forwards,
+        'midfielders': midfielders,
+        'defenders': defenders,
+        'goalkeepers': goalkeepers,
+    }
+    
+    return render(request, "home/squad.html", context)
+
 
 def fans(request):
     return render(request, "home/fans.html" )
