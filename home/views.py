@@ -3,13 +3,18 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import NewsForm
 from . models import Fixture, Result, Player,  News
+from django.http import Http404
+from .models import Fixture
+import calendar
+from datetime import datetime
+from django.utils import timezone
 
 
 def home(request):
     fixtures = Fixture.objects.order_by("-date")[:3]
     results = Result.objects.order_by('-date')[:3]
     players = Player.objects.all()[:4]
-    return render(request, "home/home.html", {"fixtures": fixtures, "results": results, "players": players})
+    return render(request, "home/home.html", {"fixtures": fixtures,"results": results, "players": players})
 
 def about(request):
     return render(request, "home/about.html" )
@@ -33,9 +38,36 @@ def team(request):
 def fans(request):
     return render(request, "home/fans.html" )
 
+
 def matches(request):
-    fixtures = Fixture.objects.all()
-    return render(request, "home/matches.html", {"fixtures": fixtures} )
+    current_year = timezone.now().year
+    current_month = timezone.now().month
+
+    selected_month = request.GET.get('month', 'August') 
+    selected_year = int(request.GET.get('year', current_year)) 
+
+    valid_months = {
+        'August': 8, 'September': 9, 'October': 10, 'November': 11, 'December': 12,
+        'January': 1, 'February': 2, 'March': 3, 'April': 4, 'May': 5
+    }
+
+    if selected_month not in valid_months:
+        selected_month = 'August'
+
+    month_number = valid_months[selected_month]
+    if month_number in range(8, 13): 
+        fixtures = Fixture.objects.filter(date__month=month_number, date__year=selected_year)
+    else: 
+        fixtures = Fixture.objects.filter(date__month=month_number, date__year=selected_year + 1)
+
+    context = {
+        "month": selected_month,
+        "year": selected_year,
+        "fixtures": fixtures,
+        "valid_months": list(valid_months.keys()),
+    }
+
+    return render(request, "home/matches.html", context)
 
 def store(request):
     return render(request, "home/store.html" )

@@ -111,7 +111,7 @@
       <div class="col-md-6">
         <div class="card" style="background-color: #1a1a1a; border: 1px solid #000000; margin-bottom: 1rem;">
           <div class="card-body" style="display: flex; padding: 0;">
-            <div style="width: 40%; height: 240px; background-image: url('{% static "home/star1.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
             <div style="width: 60%; padding: 0.5rem; color: #909090;">
               <h5 style="font-size: 1rem; font-weight: bold; color: #A9A9A9;">{{player.first_name}} {{player.last_name}}</h5>
               <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{player.position}}</p>
@@ -136,7 +136,7 @@
 <section class="tabs_an_gap " style=" padding: 40px 20px; background: #ffffff">
     <div class="container" >
       <div class="tabs_inner">
-        <ul class="nav nav-tabs " id="myTab" role="tablist" style="background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #062b5c, #97002a); border-bottom: 2px solid #444;">
+        <ul class="nav nav-tabs " id="myTab" role="tablist" style="background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #97002a, #97002a); border-bottom: 2px solid #444;">
             <li class="nav-item">
                 <a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true" style="color: #ffffff; font-weight: bold;">News</a>
             </li>

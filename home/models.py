@@ -44,6 +44,7 @@ class Fixture(models.Model):
         ordering = ["-date"]
         unique_together = ['home', 'away', 'date', 'time']
 
+
 class Result(models.Model):
     fixture = models.OneToOneField(Fixture, on_delete=models.CASCADE)
     home_score = models.PositiveIntegerField()

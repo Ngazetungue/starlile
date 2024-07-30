@@ -2,36 +2,36 @@
 {% load static %}
 
 {% block content %}
-<section id="player-section" style="padding: 40px 20px; background-color: #f0f0f0;">
-    <div class="container mt-5">
+<section id="player-section" style="padding: 40px 20px; background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #97002a, #97002a);">
+    <div class="container mt-5" style="background: #1a1a1a;">
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
+        <ul class="nav nav-tabs " role="tablist" style="  background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #97002a, #97002a); border-top: 2px solid #444;">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#men" role="tab" style="background-color: #007bff; color: white; border-color: #007bff;">Men</a>
+                <a class="nav-link active" data-toggle="tab" href="#men" role="tab" style=" color: #ffffff; border-color: #007bff;">Men</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#women" role="tab" style="background-color: #f8f9fa; border-color: #dee2e6;">Women</a>
+                <a class="nav-link" data-toggle="tab" href="#women" role="tab" style=" color: #ffffff; border-color: #dee2e6;">Women</a>
             </li>
         </ul>
-
+        <br>
         <!-- Tab panes -->
         <div class="tab-content">
             <!-- Men Tab -->
             <div class="tab-pane active" id="men" role="tabpanel">
                 <!-- Forwards -->
-                <h5 style="color: #333333;">Forwards</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">FORWARDS</h5>
                 <div class="row">
                     {% for player in forwards %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -40,19 +40,19 @@
                 </div>
 
                 <!-- Midfielders -->
-                <h5 style="color: #333333;">Midfielders</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">MIDFIELDERS</h5>
                 <div class="row">
                     {% for player in midfielders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -61,19 +61,19 @@
                 </div>
 
                 <!-- Defenders -->
-                <h5 style="color: #333333;">Defenders</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">DEFENDERS</h5>
                 <div class="row">
                     {% for player in defenders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -82,19 +82,19 @@
                 </div>
 
                 <!-- Goalkeepers -->
-                <h5 style="color: #333333;">Goalkeepers</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">GOALKEEPERS</h5>
                 <div class="row">
                     {% for player in goalkeepers %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -105,19 +105,19 @@
 
             <!-- Women Tab -->
             <div class="tab-pane" id="women" role="tabpanel">
-                <h5 style="color: #333333;">Forwards</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">FORWARDS</h5>
                 <div class="row">
                     {% for player in forwards %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -125,19 +125,19 @@
                     {% endfor %}
                 </div>
 
-                <h5 style="color: #333333;">Midfielders</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">MIDFIELDERS</h5>
                 <div class="row">
                     {% for player in midfielders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -145,19 +145,19 @@
                     {% endfor %}
                 </div>
 
-                <h5 style="color: #333333;">Defenders</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">DEFENDERS</h5>
                 <div class="row">
                     {% for player in defenders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>
@@ -165,19 +165,19 @@
                     {% endfor %}
                 </div>
 
-                <h5 style="color: #333333;">Goalkeepers</h5>
+                <h5 class="font-weight-bold" style="color: #f0f0f0;">GOALKEEPERS</h5>
                 <div class="row">
                     {% for player in goalkeepers %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #f8f9fa; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #333333;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
                                     <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
                                 </div>
                             </div>
                         </div>

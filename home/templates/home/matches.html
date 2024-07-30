@@ -2,52 +2,57 @@
 {% load static %}
 
 {% block content %}
-<section id="upcoming-matches-section" style="padding: 40px 20px; background: #f8f8f8;">
+<section id="upcoming-matches-section" class="py-5 bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-12 text-center" style="margin-bottom: 40px;">
-          <h2 style="font-size: 2rem; color: #062b5c;">Upcoming Matches</h2>
-        </div>
-      </div>
-  
-      <!-- July Fixtures -->
-      <div class="row">
-        <div class="col-12" style="margin-bottom: 20px;">
-          <h3 style="font-size: 1.5rem; color: #97002a;">July 2024</h3>
-        </div>
-        {% for fixture in fixtures %}
-        <div class="col-12">
-          <div class="card mb-3" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background: #ffffff;">
-            <div class="card-body" style="padding: 20px;">
-              <div class="row align-items-center">
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; font-weight: bold; color: #062b5c;">{{fixture.date}}</div>
-                  <div style="font-size: 1rem; color: #666666;">{{fixture.time}}</div>
+
+        <!-- Month and Year Selector -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="btn-group">
+                    {% for m in valid_months %}
+                    <a href="?month={{ m }}&year={{ year }}" class="btn btn-secondary{% if m == month %} active{% endif %}">
+                        {{ m }}
+                    </a>
+                    {% endfor %}
                 </div>
-                <div class="col-md-6 text-center">
-                  <div style="font-size: 1rem; font-weight: bold; color: #062b5c;">
-                    <img src="{{ fixture.home.logo.url }}" alt="{{ fixture.home.name }}" style="height: 30px; vertical-align: middle;">
-                    {{fixture.home}} vs 
-                    <img src="{{ fixture.away.logo.url }}" alt="{{ fixture.away.name }}" style="height: 30px; vertical-align: middle;">
-                    {{fixture.away}}
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div style="font-size: 1rem; color: #666666;">{{fixture.stadium}}</div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-        {% endfor %}
-      </div>
-  
-      <!-- August Fixtures -->
-      
-  
-      <!-- Add more months and matches as needed -->
-  
+
+        <!-- Fixtures -->
+        <div class="row">
+            {% if fixtures %}
+                {% for fixture in fixtures %}
+                <div class="col-12 mb-3">
+                    <div class="card shadow-sm bg-white">
+                        <div class="card-body p-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center">
+                                    <div class="font-weight-bold text-primary">{{ fixture.date }}</div>
+                                    <div class="text-secondary">{{ fixture.time }}</div>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="font-weight-bold text-primary">
+                                        <img src="{{ fixture.home.logo.url }}" alt="{{ fixture.home.name }}" style="height: 30px; vertical-align: middle;">
+                                        {{ fixture.home }} vs 
+                                        <img src="{{ fixture.away.logo.url }}" alt="{{ fixture.away.name }}" style="height: 30px; vertical-align: middle;">
+                                        {{ fixture.away }}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <div class="text-secondary">{{ fixture.stadium }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="col-12 text-center text-secondary">
+                No fixtures available for {{ month }}.
+            </div>
+            {% endif %}
+        </div>
     </div>
-  </section>
-  
-  {% endblock content %}
+</section>
+
+{% endblock content %}
