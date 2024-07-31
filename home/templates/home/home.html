@@ -128,10 +128,7 @@
   </div>
 </section>
 
-
-
 <!--================ Tabs Area =================-->
-
 
 <section class="tabs_an_gap " style=" padding: 40px 20px; background: #ffffff">
     <div class="container" >
@@ -156,373 +153,165 @@
 
             <div class="tab-content" id="myTabContent">
                 <!-- News Tab Content -->
-<div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
-  <div class="container py-5">
-      <div class="row">
-          <div class="col-12">
-              <div class="album bg-light">
-                  <div class="container" style="max-width: 1600px;">
-                      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                          <div class="col">
-                              <div class="card shadow-sm border-light">
-                                  <img class="card-img-top" src="{% static 'home/star1.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
-                                  <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                          <small class="text-muted">9 mins ago</small>
+                <div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+                  <div class="container py-5">
+                      <div class="row">
+                          {% for new in news %}
+                              <div class="col-md-4">
+                                  <div class="album bg-light">
+                                      <div class="container" style="max-width: 1600px;">
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="card shadow-sm border-light">
+                                                      <img class="card-img-top" src="{{new.image.url}}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                                      <div class="card-body">
+                                                          <h6 class="font-weight-bold" style="color: #062b5c">{{ new.title }}.</h6>
+                                                          <div class="d-flex justify-content-between align-items-center">
+                                                              <small class="text-muted">{{ new.date }}</small>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
                                       </div>
                                   </div>
                               </div>
-                          </div>
-                          <div class="col">
-                              <div class="card shadow-sm border-light">
-                                  <img class="card-img-top" src="{% static 'home/star5.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
-                                  <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                          <small class="text-muted">9 mins ago</small>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card shadow-sm border-light">
-                                  <img class="card-img-top" src="{% static 'home/star6.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
-                                  <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                          <small class="text-muted">9 mins ago</small>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                          {% endfor %}
                       </div>
                   </div>
               </div>
-              <!-- End Latest News Section -->
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End News Tab Content -->
-
+              <!-- End News Tab Content -->
                 
                 <!-- TV Tab Content -->
                 <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
-                    <div class="row">
-                
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container" style="max-width: 1400px;">
-                        
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
+                  <div class="container py-5">
+                      <div class="row">
+                          {% for new in news %}
+                              <div class="col-md-4">
+                                  <div class="album bg-light">
+                                      <div class="container" style="max-width: 1600px;">
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="card shadow-sm border-light">
+                                                      <img class="card-img-top" src="{{ new.image.url }}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                                      <div class="card-body">
+                                                          <h4 class="card-text">{{ new.title }}.</h4>
+                                                          <div class="d-flex justify-content-between align-items-center">
+                                                              <small class="text-muted">{{ new.date }}</small>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
                                       </div>
-                                    </div>
                                   </div>
-                                </div>
-                                
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
-                          </div>
-                        
-                    </div>
-                </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+              
                 <!-- End TV Tab Content -->
                 
                 <!-- Debmarine Tab Content -->
                 <div class="tab-pane fade" id="debmarine" role="tabpanel" aria-labelledby="debmarine-tab">
-                    <div class="row">
-                    
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container" style="max-width: 1400px;">
-                        
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
+                  <div class="container py-5">
+                      <div class="row">
+                          {% for new in news %}
+                              <div class="col-md-4">
+                                  <div class="album bg-light">
+                                      <div class="container" style="max-width: 1600px;">
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="card shadow-sm border-light">
+                                                      <img class="card-img-top" src="{% static 'home/star1.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                                      <div class="card-body">
+                                                          <h4 class="card-text">{{ new.title }}.</h4>
+                                                          <div class="d-flex justify-content-between align-items-center">
+                                                              <small class="text-muted">{{ new.date }}</small>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
                                       </div>
-                                    </div>
                                   </div>
-                                </div>
-                                
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
-                          </div>
-                        
-                    </div>
-                </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+              
                 <!-- End Debmarine Tab Content -->
                 
                 <!-- CAF Tab Content -->
                 <div class="tab-pane fade" id="caf" role="tabpanel" aria-labelledby="caf-tab">
-                    <div class="row">
-                    
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container" style="max-width: 1400px;">
-                        
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
+                  <div class="container py-5">
+                      <div class="row">
+                          {% for new in news %}
+                              <div class="col-md-4">
+                                  <div class="album bg-light">
+                                      <div class="container" style="max-width: 1600px;">
+                                          <div class="row ">
+                                              <div class="col">
+                                                  <div class="card shadow-sm border-light">
+                                                      <img class="card-img-top" src="{% static 'home/star1.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                                      <div class="card-body">
+                                                          <h4 class="card-text">{{ new.title }}.</h4>
+                                                          <div class="d-flex justify-content-between align-items-center">
+                                                              <small class="text-muted">{{ new.date }}</small>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
                                       </div>
-                                    </div>
                                   </div>
-                                </div>
                                 
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
-                          </div>
-                        
-                    </div>
-                </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+
+              
                 <!-- End CAF Tab Content -->
                 
                 <!-- NFA Cup Tab Content -->
-                <div class="tab-pane fade" id="nfa" role="tabpanel" aria-labelledby="nfa-tab">
-                    <div class="row">
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container" style="max-width: 1400px;">
-                        
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
+                <div class="tab-pane fade " id="nfa" role="tabpanel" aria-labelledby="nfa-tab">
+                  <div class="container py-5">
+                      <div class="row">
+                          {% for new in news %}
+                              <div class="col-md-4">
+                                  <div class="album bg-light">
+                                      <div class="container" style="max-width: 1600px;">
+                                          <div class="row ">
+                                              <div class="col">
+                                                  <div class="card shadow-sm border-light">
+                                                      <img class="card-img-top" src="{% static 'home/star1.jpg' %}" alt="Thumbnail" style="width: 100%; height: 225px; object-fit: cover;">
+                                                      <div class="card-body">
+                                                          <h4 class="card-text">{{ new.title }}.</h4>
+                                                          <div class="d-flex justify-content-between align-items-center">
+                                                              <small class="text-muted">{{ new.date }}</small>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
                                       </div>
-                                    </div>
                                   </div>
-                                </div>
-                                
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card shadow-sm">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                    <div class="card-body">
-                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
-                          </div>
-                        
-                    </div>
-                </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+
                 <!-- End NFA Cup Tab Content -->
                 
             </div>
         </div>
     </div>
 </section>
-
-{% comment %} <section id="fans-section" style="padding: 40px 20px; background: #f0f0f0;">
-<div class="container py-5" style="background: #f0f0f0; max-width:1600px;">
-  <h2 class="text-center mb-4" style="font-weight: bold; color: #062b5c;">FOR FANS</h2>
-  <div class="row">
-    <!-- Pictures Column -->
-    <div class="col-md-6 mb-4">
-      <div class="d-flex flex-column gap-3">
-        <img src="{% static 'home/fan3.jpg' %}" alt="Fan Photo 1" class="img-fluid rounded">
-      </div>
-    </div>
-    <!-- Cards Column -->
-    <div class="col-md-6 mb-4">
-      <div class="row justify-content-around">
-        <!-- Membership -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-
-              <h5 class="card-title mt-3" style="color: #e60000;">Membership</h5>
-              <p class="lead">Become an official member and support the club.</p>
-              <a href="#" class="btn btn-primary" style="background: #062b5c;">Join Now</a>
-            </div>
-          </div>
-        </div>
-        <!-- Tickets -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <h5 class="card-title mt-3" style="color: #e60000;">Tickets</h5>
-              <p class="lead">Purchase tickets for upcoming matches and events.</p>
-              <a href="#" class="btn btn-primary" style="background: #062b5c;">Buy Tickets</a>
-            </div>
-          </div>
-        </div>
-        <!-- Kits -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-
-              <h5 class="card-title mt-3" style="color: #e60000;">Kits</h5>
-              <p class="lead">Get the latest official club kits and merchandise.</p>
-              <a href="#" class="btn btn-primary" style="background: #062b5c;">Shop Now</a>
-            </div>
-          </div>
-        </div>
-        <!-- Other Essentials -->
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-
-              <h5 class="card-title mt-3" style="color: #e60000;">Essentials</h5>
-              <p class="lead">Find all the essentials you need to support the club.</p>
-              <a href="#" class="btn btn-primary" style="background: #062b5c;">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section> {% endcomment %}
-
-<!--================ End Tabs Area =================-->
-
 
 <section id="honours-section" style="padding: 40px 20px; background: linear-gradient(to bottom, #97002a, #000000);">
   <div class="container">

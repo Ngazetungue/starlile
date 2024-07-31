@@ -13,8 +13,9 @@ from django.utils import timezone
 def home(request):
     fixtures = Fixture.objects.order_by("-date")[:3]
     results = Result.objects.order_by('-date')[:3]
+    news = News.objects.order_by('-date')[:3]
     players = Player.objects.all()[:4]
-    return render(request, "home/home.html", {"fixtures": fixtures,"results": results, "players": players})
+    return render(request, "home/home.html", {"fixtures": fixtures,"results": results, "news":news, "players": players})
 
 def about(request):
     return render(request, "home/about.html" )
@@ -73,8 +74,8 @@ def store(request):
     return render(request, "home/store.html" )
 
 def news_list(request):
-    news = News.objects.all()
-    return render(request, 'home/news_list.html', {'news': news})
+    news = News.objects.order_by('-date')[:3]
+    return render(request, 'home/home.html', {'news': news})
 
 def news_detail(request, id):
     news_item = get_object_or_404(News, id=id)
