@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-<section id="player-section" style="padding: 40px 20px; background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #97002a, #97002a);">
-    <div class="container mt-5" style="background: #1a1a1a;">
+<section id="player-section" style="padding: 40px 20px; background: radial-gradient(circle, #f0f0f0 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #f0f0f0, #f0f0f0);">
+    <div class="container mt-5" style="background: #ffffff;">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs " role="tablist" style="  background: radial-gradient(circle, #062b5c 10%, transparent 10%) 0 0 / 10px 10px, linear-gradient(to bottom,  #97002a, #97002a); border-top: 2px solid #444;">
             <li class="nav-item">
@@ -19,19 +19,19 @@
             <!-- Men Tab -->
             <div class="tab-pane active" id="men" role="tabpanel">
                 <!-- Forwards -->
-                <h5 class="font-weight-bold" style="color: #f0f0f0;">FORWARDS</h5>
+                <h5 class="font-weight-bold" style="color: #1a1a1a;">FORWARDS</h5>
                 <div class="row">
                     {% for player in forwards %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
-                                    <h5 style="font-size: 1rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
-                                    <p style="font-size: 0.75rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
-                                    <p style="font-size: 0.75rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
-                                    <p style="font-size: 0.75rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
-                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">Follow</a>
+                                    <h5 style="font-size: 1.25rem; font-weight: bold; color: #f0f0f0;">{{ player.first_name }} {{ player.last_name }}</h5>
+                                    <p style="font-size: 1rem; margin-top: 0.25rem;">Position: {{ player.get_position_display }}</p>
+                                    <p style="font-size: 1rem; margin-top: 0.25rem;">Country: {{ player.country.name }}</p>
+                                    <p style="font-size: 1rem; margin-top: 0.25rem;">Shirt No: {{ player.shirt_number }}</p>
+                                    <a href="#" style="display: inline-block; padding: 0.25rem 0.5rem; margin-top: 0.5rem; background-color: #8c0012; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 0.75rem;">More</a>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                 <div class="row">
                     {% for player in midfielders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
@@ -65,7 +65,7 @@
                 <div class="row">
                     {% for player in defenders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
@@ -86,7 +86,7 @@
                 <div class="row">
                     {% for player in goalkeepers %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
@@ -109,7 +109,7 @@
                 <div class="row">
                     {% for player in forwards %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
@@ -129,7 +129,7 @@
                 <div class="row">
                     {% for player in midfielders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
@@ -149,7 +149,7 @@
                 <div class="row">
                     {% for player in defenders %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
@@ -169,7 +169,7 @@
                 <div class="row">
                     {% for player in goalkeepers %}
                     <div class="col-md-6">
-                        <div class="card" style="background-color: #1a1a1a; border: 1px solid #dee2e6; margin-bottom: 1rem;">
+                        <div class="card" style="background-color: #867979; border: 1px solid #dee2e6; margin-bottom: 1rem;">
                             <div class="card-body" style="display: flex; padding: 0;">
                                 <div style="width: 40%; height: 240px; background-image: url('{{ player.photo.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                 <div style="width: 60%; padding: 0.5rem; color: #495057;">
